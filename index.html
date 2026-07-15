@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=favorite"
+    />
+    <title>Cat Café</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navegacao">
+        <h2>Cat Café</h2>
+        <ul>
+          <!-- <li><a href="#home">Início</a></li>-->
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#cats">Gatinhos</a></li>
+          <li><a href="#menu">Cardápio</a></li>
+          <!-- <li><a href="#adoption">Adoção</a></li>-->
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!--HOME-->
+    <main>
+      <section id="home" class="home">
+        <div class="home-content">
+          <span class="home-tag"> Café & Adoção</span>
+          <h1>Bem-vindo ao <span class="destaque">Cat Café</span></h1>
+          <p>
+            No Cat Café, cada xícara de café conta uma história. Enquanto você
+            aproveita bebidas e doces preparados com carinho, pode conhecer
+            nossos gatinhos resgatados que aguardam uma nova família.
+          </p>
+          <div class="buttons-home">
+            <a href="#menu" class="btn btn-primary">Ver Cardápio</a>
+            <a href="#cats" class="btn btn-secondary">Conhecer os Gatinhos</a>
+          </div>
+        </div>
+      </section>
+
+      <!--SOBRE-->
+      <section id="about" class="sobre">
+       
+        <div class="sobre-tudo"> <img
+          src="/assets/img/fachada-cat-cafe.png"
+          alt="Cat Café fachada"
+          width="300px"
+        /> 
+        <div class="sobre-texto">
+        <span class="sobre-tag">Nossa História</span>
+        <h2>Onde tudo começou</h2>
+        <p>
+          O Cat Café nasceu da paixão por duas coisas: café e gatos. Criamos um
+          espaço acolhedor onde pessoas podem relaxar, trabalhar, estudar ou
+          simplesmente aproveitar um momento especial na companhia de gatinhos
+          resgatados. Nosso objetivo é oferecer uma experiência única enquanto
+          ajudamos animais a encontrarem lares cheios de amor. Todos os gatos
+          disponíveis para adoção recebem cuidados veterinários, alimentação
+          adequada e muito carinho até encontrarem sua família definitiva.
+          </p>
+        </div>
+        </div>
+      </section>
+
+      <!--GATINHOS-->
+      <section id="cats" class="nossos-gatinhos">
+        <h2>Nossos Gatinhos</h2> 
+        <div class="cat-itens">
+        <div class="busca-gatinho">
+          <input
+            type="text"
+            id="busca-input"
+            placeholder="Buscar gatinho pelo nome..."
+          />
+        </div>
+        <div class="icon-fav">
+          <span class="material-symbols-outlined"> favorite </span>
+        </div>
+       </div>
+          <div class="cat-buttons">
+            <button
+              class="btn btn-cat"
+              onclick="filterCats('todos')"
+              id="todos"
+            >
+              Todos
+            </button>
+            <button
+              class="btn btn-cat"
+              onclick="filterCats('macho')"
+              id="macho"
+            >
+              Macho
+            </button>
+            <button
+              class="btn btn-cat"
+              onclick="filterCats('femea')"
+              id="femea"
+            >
+              Fêmea
+            </button>
+          </div>
+        </div>
+        <div class="gatinho-container">
+          <template id="gatinho-template">
+            <article class="card-gatinho">
+              <img src="" alt="" />
+              <h3></h3>
+              <p></p>
+              <p></p>
+              <button class="button-card">Conhecer</button>
+            </article>
+          </template>
+        </div>
+      </section>
+
+      <!--CARDÁPIO-->
+      <section id="menu" class="menu">
+        <h2>Nosso Cardápio</h2>
+
+        <div class="menu-buttons">
+          <button
+            class="btn btn-menu"
+            onclick="filterMenu('bebidas')"
+            id="bebidas"
+          >
+            Bebidas
+          </button>
+          <button
+            class="btn btn-menu"
+            onclick="filterMenu('salgados')"
+            id="salgados"
+          >
+            Salgados
+          </button>
+          <button class="btn btn-menu" onclick="filterMenu('doces')" id="doces">
+            Doces
+          </button>
+        </div>
+
+        <section id="bebidas" class="categoria">
+          <h3>☕ Bebidas</h3>
+          <div class="menu-container">
+            <template id="bebida-template">
+              <article class="card-menu">
+                <img class="img-card" src="" alt="" />
+                <h4></h4>
+                <p></p>
+                <span class="preco"></span>
+              </article>
+            </template>
+          </div>
+        </section>
+
+        <section id="salgados" class="categoria">
+          <h3>🥐 Salgados</h3>
+          <div class="menu-container">
+            <template id="salgado-template">
+              <article class="card-menu">
+                <img class="img-card" src="" alt="" />
+                <h4></h4>
+                <p></p>
+                <span class="preco"></span>
+              </article>
+            </template>
+          </div>
+        </section>
+
+        <section id="doces" class="categoria">
+          <h3>🍰 Doces</h3>
+          <div class="menu-container">
+            <template id="doce-template">
+              <article class="card-menu">
+                <img class="img-card" src="" alt="" />
+                <h4></h4>
+                <p></p>
+                <span class="preco"></span>
+              </article>
+            </template>
+          </div>
+        </section>
+      </section>
+
+      <section id="adoption" class="adoption">
+        <h2>Como Adotar?</h2>
+        <p class="adoption-subtitle">
+          Adotar um gatinho é um processo simples e gratificante. Siga os passos
+          abaixo para levar seu novo amigo para casa.
+        </p>
+
+        <div class="steps">
+          <div class="step">
+            <h3>.1</h3>
+            <p>Conheça nossos gatinhos.</p>
+          </div>
+
+          <div class="step">
+            <h3>.2</h3>
+            <p>Converse com nossa equipe.</p>
+          </div>
+
+          <div class="step">
+            <h3>.3</h3>
+            <p>Preencha o formulário.</p>
+          </div>
+
+          <div class="step">
+            <h3>.4</h3>
+            <p>Leve seu novo amigo para casa.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="form-contato">
+        <h2>Fale Conosco</h2>
+        <p class="contato-subtitle">
+          Tem alguma dúvida sobre adoção ou quer reservar uma mesa? Manda uma
+          mensagem pra gente.
+        </p>
+
+        <form class="form-card" method="post">
+          <div class="form-group">
+            <label for="name">Nome:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Seu nome completo"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Seu melhor email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Mensagem:</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Escreva sua dúvida"
+              required
+            ></textarea>
+          </div>
+
+          <button class="btn-enviar" type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+    <footer class="rodape">
+      <p>
+        &copy; Cat Café <time-datetime>2026</time-datetime> • Todos os direitos
+        reservados.
+      </p>
+    </footer>
+  </body>
+</html>
