@@ -1,0 +1,38 @@
+/*RODAPÉ*/
+.rodape {
+  background: var(--texto);
+  color: var(--fundo);
+  padding: 1rem 1.5rem 2rem;
+}
+.rodape-conteudo {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+}
+.rodape-marca h3 {
+  font-family: 'Playfair Display', Serif;
+  color: var(--creme);
+  margin: 0 0 0 0.3rem;
+  font-size: 1.5rem;
+}
+.rodape-marca {
+  padding: 25px;
+}
+.subtitulo-rodape {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--destaque);
+}
+
+.conteudo-copy p {
+  color: var(--creme);
+  font-size: 0.9rem;
+}
+
+.linha-div {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin: 0 auto 30px;
+  width: 100%;
+}
