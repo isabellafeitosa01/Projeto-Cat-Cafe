@@ -1,6 +1,6 @@
 .sobre {
   padding: 7rem 1.5rem;
-  background: var(--Fundo);
+  background: var(--branco);
 }
 
 .sobre-tudo {
@@ -28,7 +28,7 @@
 
 .sobre-tag {
   display: inline-block;
-  color: var(--Secundária);
+  color: var(--secundaria);
   font-size: 0.9rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -37,14 +37,14 @@
 }
 
 .sobre-texto h2 {
-  color: var(--Principal);
+  color: var(--principal);
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
   margin: 0 0 1rem;
 }
 
 .sobre-texto p {
-  color: var(--Texto);
+  color: var(--texto);
   font-size: 0.95rem;
   line-height: 1.7;
   max-width: 55ch; /* ch= largura de blocos de linha, linhas muito longas são difíceis de ler (para nao esquecer)*/

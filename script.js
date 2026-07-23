@@ -41,6 +41,27 @@ const gatos = [
     sexo: 'macho',
     img: '/assets/img/miguel.jpg',
   },
+  {
+    nome: 'Miguel',
+    idade: '5 anos',
+    status: 'Disponível',
+    sexo: 'macho',
+    img: '/assets/img/miguel.jpg',
+  },
+  {
+    nome: 'Miguel',
+    idade: '5 anos',
+    status: 'Disponível',
+    sexo: 'macho',
+    img: '/assets/img/miguel.jpg',
+  },
+  {
+    nome: 'Miguel',
+    idade: '5 anos',
+    status: 'Disponível',
+    sexo: 'macho',
+    img: '/assets/img/miguel.jpg',
+  },
 ];
 
 const cardapio = [
@@ -173,3 +194,18 @@ const cardapio = [
     img: '',
   },
 ];
+
+//modal favoritos
+const botaoFavoritos = document.querySelector('#btn-favoritos');
+const modalFavoritos = document.querySelector('#modal-favoritos');
+const fecharModal = document.querySelector('#modal-fechar');
+
+//abrir modal quando clicar no coração
+botaoFavoritos.addEventListener('click', () => {
+  modalFavoritos.classList.add('ativo');
+});
+
+//fechar modal quando clicar no X
+fecharModal.addEventListener('click', function () {
+  modalFavoritos.classList.remove('ativo');
+});

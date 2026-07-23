@@ -1,4 +1,3 @@
-/*HOME*/
 .inicio {
   display: flex;
   flex-direction: column;
@@ -16,7 +15,7 @@
   text-align: center;
 }
 
-.inicio-tag {
+.tag-destaque {
   display: inline-block;
   background-color: var(--destaque);
   color: var(--texto);

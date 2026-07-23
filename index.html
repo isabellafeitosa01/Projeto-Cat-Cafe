@@ -21,7 +21,7 @@
     />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=searchfavorite"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=favoritesearch"
     />
     <title>Cat Café</title>
   </head>
@@ -52,7 +52,7 @@
     <main>
       <section class="inicio">
         <div class="inicio-tudo">
-          <span class="inicio-tag"> Café, Carinho & Adoção</span>
+          <span class="tag-destaque"> Café, Carinho & Adoção</span>
           <h1>Bem-vindo ao <span class="destaque">Cat Café</span></h1>
           <p>
             No Cat Café, cada xícara de café conta uma história. Enquanto você
@@ -71,11 +71,7 @@
       <!--SOBRE-->
       <section id="sobre" class="sobre">
         <div class="sobre-tudo">
-          <img
-            src="/assets/img/fachada-cat-cafe.png"
-            alt="Cat Café fachada"
-            width="300px"
-          />
+          <img src="/assets/img/fachada-cat-cafe.png" alt="Cat Café fachada" />
           <div class="sobre-texto">
             <span class="sobre-tag">Nossa História</span>
             <h2>Onde tudo começou</h2>
@@ -120,16 +116,20 @@
             Fêmea
           </button>
         </div>
-        <div class="gatinho-cards">
+        <div class="todos-cards">
           <template id="gatinho-template">
-            <article class="card-gatinho">
-              <button class="favorito-botao" aria-label="Favoritar">
-                <span class="material-symbols-outlined">favorite</span>
+            <article class="card-geral">
+              <button
+                id="btn-favoritar"
+                class="favorito-botao"
+                aria-label="Favoritar"
+              >
+                <span class="icone-coracao">favorite</span>
               </button>
-              <img src="" alt="" />
+              <img class="img-card" src="" alt="" />
               <h3></h3>
               <p></p>
-              <p></p>
+              <p class="tag"></p>
               <button class="botao-card">Conhecer</button>
             </article>
           </template>
@@ -141,6 +141,13 @@
         <h2>Cardápio</h2>
 
         <div class="menu-botao">
+          <button
+            class="btn btn-categoria"
+            onclick="filterMenu('todos')"
+            id="filtro-todos"
+          >
+            Todos
+          </button>
           <button
             class="btn btn-categoria"
             onclick="filterMenu('bebidas')"
@@ -164,7 +171,7 @@
           </button>
         </div>
         <div class="busca-caixa">
-          <span class="material-symbols-outlined busca-icone"> search </span>
+          <span class="busca-icone">search</span>
           <input
             type="search"
             id="busca-menu"
@@ -172,9 +179,9 @@
           />
         </div>
         <section id="bebidas" class="categoria">
-          <div class="categoria-cardapio">
+          <div class="todos-cards">
             <template id="bebida-template">
-              <article class="card-menu">
+              <article class="card-geral">
                 <img class="img-card" src="" alt="" />
                 <h4></h4>
                 <p></p>
@@ -185,9 +192,9 @@
         </section>
 
         <section id="salgados" class="categoria">
-          <div class="menu-tudo">
+          <div class="todos-cards">
             <template id="salgado-template">
-              <article class="card-menu">
+              <article class="card-geral">
                 <img class="img-card" src="" alt="" />
                 <h4></h4>
                 <p></p>
@@ -198,9 +205,9 @@
         </section>
 
         <section id="doces" class="categoria">
-          <div class="menu-container">
+          <div class="todos-cards">
             <template id="doce-template">
-              <article class="card-menu">
+              <article class="card-geral">
                 <img class="img-card" src="" alt="" />
                 <h4></h4>
                 <p></p>
@@ -288,6 +295,18 @@
 
           <button class="btn-enviar" type="submit">Enviar</button>
         </form>
+
+        <div class="modal" id="modal-favoritos">
+          <div class="modal-favoritos">
+            <h3>Meus gatinhos favoritos</h3>
+            <button class="modal-fechar" id="modal-fechar" aria-label="Fechar">
+              ✕
+            </button>
+            <button class="btn-conhecer-todos" id="btn-conhecer-todos">
+              Quero conhecer todos os favoritos
+            </button>
+          </div>
+        </div>
       </section>
     </main>
     <footer class="rodape">
